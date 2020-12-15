@@ -1,0 +1,11 @@
+{
+    "cSpell.words": [
+        "webp"
+    ],
+    "eslint.validate": [
+        "javascript"
+    ],
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": true
+    }
+}

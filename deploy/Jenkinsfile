@@ -1,0 +1,43 @@
+pipeline {
+  agent any
+  options {
+    timeout(20)
+    buildDiscarder logRotator(artifactDaysToKeepStr: '', artifactNumToKeepStr: '', daysToKeepStr: '', numToKeepStr: '2')
+  }
+  environment {
+    ARTIFACT_ID = "1.0.${BUILD_NUMBER}"
+  }
+  stages {
+    stage('Build - Test') {
+      steps {
+        script {
+          sh 'cp /home/servidores/.env $(pwd)'
+          sh 'docker build -f ./deploy/Dockerfile -t employees:$ARTIFACT_ID .'
+        }
+      }
+    }
+
+    stage('Deploy') {
+      steps {
+        script {
+          sh 'cp /home/servidores/.env $(pwd)'
+          sh 'env TAG=$ARTIFACT_ID docker stack deploy -c ./deploy/stack.yml limpo'
+          sh 'docker container prune -f'
+          sh 'docker image prune -f'
+        }
+      }
+    }
+
+    stage('Public Image') {
+      steps {
+        script {
+          sh '''id_image=$(docker image inspect -f "{{ .Id }}" employees)
+docker tag $id_image nickdpz/limpo:$ARTIFACT_ID
+'''
+          sh 'docker push nickdpz/limpo:$ARTIFACT_ID'
+        }
+      }
+    }
+
+  }
+}

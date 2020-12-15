@@ -1,0 +1,19 @@
+{
+  "admin": [
+    "create:user",
+    "create:users",
+    "get:user",
+    "list:users",
+    "update:user",
+    "update:users",
+    "delete:user",
+    "delete:users",
+    "create:company",
+    "update:company",
+    "delete:company",
+    "get:company",
+    "list:companies"
+  ],
+  "support": ["get:user", "update:user", "delete:user"],
+  "employee": ["get:user", "update:user", "delete:user"]
+}

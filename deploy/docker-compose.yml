@@ -1,0 +1,13 @@
+version: '3'
+services:
+  employee:
+    image: employee
+    container_name: employees-container
+    restart: on-failure
+    env_file:
+        - ../.env
+    ports:
+      - "4000:3000"
+    volumes:
+      - "$PWD:/usr/src/app"
+      - "/usr/src/app/node_modules"

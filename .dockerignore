@@ -1,0 +1,8 @@
+README.md
+.env.example
+.gitignore
+node_modules
+npm-devug.log*
+deploy
+.vscode
+LICENSE

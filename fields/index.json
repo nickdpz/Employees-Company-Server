@@ -1,0 +1,20 @@
+{
+  "users": [
+    {
+      "userName": "nicolas",
+      "name": "Nicolas",
+      "lastName": "Pastran",
+      "email": "ndpastranzamora@gmail.com",
+      "password": "1234",
+      "role": "admin",
+      "phone": "3022183843",
+      "document": "00000000",
+      "active": true
+    }
+  ],
+  "company": {
+    "name": "ifx",
+    "description": "empresa con personas en talento humano despistadas",
+    "nit":"12121211"
+  }
+}
