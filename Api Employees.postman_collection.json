@@ -1,0 +1,884 @@
+{
+	"info": {
+		"_postman_id": "5d11e24e-e1d5-4da5-8a54-b900c9065293",
+		"name": "Api Employees",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "Obtener Usuarios API",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{access_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/users/",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"users",
+								""
+							],
+							"query": [
+								{
+									"key": "role",
+									"value": "admin",
+									"description": "El rol de usuario puede ser \"admin\", \"worker\", \"client\",\"none\" ",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obtener un Usuario API",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{access_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/users/:id",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"users",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "5fd82c9e5ea9e9175ce78db4",
+									"type": "string"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar Usuarios API",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{access_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "_id",
+									"value": "5fd82c9e5ea9e9175ce78db4",
+									"description": "ID de usuario",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/users/delete",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"users",
+								"delete"
+							]
+						},
+						"description": "Envia un Query Multiple"
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar Usuario de API",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{access_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "{{url}}/users/",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"users",
+								""
+							]
+						},
+						"description": "Envia un Query Multiple"
+					},
+					"response": []
+				},
+				{
+					"name": "Registrar Usuario API",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{access_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "userName",
+									"value": "mafesita",
+									"type": "text"
+								},
+								{
+									"key": "name",
+									"value": "Maria ",
+									"type": "text"
+								},
+								{
+									"key": "lastName",
+									"value": "Fernanda",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "mafesita@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "contraseña",
+									"type": "text"
+								},
+								{
+									"key": "phone",
+									"value": "3022121313",
+									"type": "text"
+								},
+								{
+									"key": "role",
+									"value": "admin",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/users/",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"users",
+								""
+							]
+						},
+						"description": "Envia un Query Multiple"
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar Usuario de API",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{access_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "email",
+									"value": "mafesita@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "phone",
+									"value": "3003218312",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/users/",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"users",
+								""
+							]
+						},
+						"description": "Envia un Query Multiple"
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar Usuarios API",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{access_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "email",
+									"value": "mafe21@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "phone",
+									"value": "3003218312",
+									"type": "text"
+								},
+								{
+									"key": "_id",
+									"value": "5fd82c9e5ea9e9175ce78db4",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/users/update",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"users",
+								"update"
+							]
+						},
+						"description": "Envia un Query Multiple"
+					},
+					"response": []
+				},
+				{
+					"name": "Informacion de Usuario API",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{access_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "{{url}}/users/get/",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"users",
+								"get",
+								""
+							]
+						},
+						"description": "Envia un Query Multiple"
+					},
+					"response": [
+						{
+							"name": "Obtener Usuarios Trabajadores",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/user/?role=worker",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"user",
+										""
+									],
+									"query": [
+										{
+											"key": "role",
+											"value": "worker",
+											"description": "El rol de usuario puede ser \"admin\", \"worker\", \"client\",\"none\" "
+										},
+										{
+											"key": "_id",
+											"value": "5ef912463baa6b2e8c9a4f49",
+											"description": "Id de usuario",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "7060"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1b94-YAGhJaJKDBFoanxm9whEOURM3vI\""
+								},
+								{
+									"key": "Set-Cookie",
+									"value": "connect.sid=s%3A_y9M2TMunH4g8Fu_xaxIgtK_oCBzqTxT.UPUWBfHMDCb3JOqVqbBpCzCNLOoGizYifS3K4D%2BdUrs; Path=/; HttpOnly"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 15 Jul 2020 03:26:53 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"error\": \"\",\n    \"message\": [\n        {\n            \"routes\": [\n                \"5ed1c38d871f265686cef98b\"\n            ],\n            \"role\": \"worker\",\n            \"phone\": 3022183841,\n            \"nodes\": [],\n            \"_id\": \"5ef912463baa6b2e8c9a4f49\",\n            \"userName\": \"argentinamartinez\",\n            \"name\": \"Argentina\",\n            \"lastName\": \"Martinez\",\n            \"email\": \"argentina@gmail.com\",\n            \"password\": \"$2a$10$.YEQyBOsZiqa2llfGcxUXe3xixRn3XeMdHICzKFk/ZpOxH6ojjbHK\",\n            \"date\": \"2020-06-28T21:57:26.556Z\",\n            \"__v\": 1\n        },\n        {\n            \"routes\": [\n                \"5ed1991f6965064b88744097\",\n                \"5ed1bd89871f265686cef988\"\n            ],\n            \"role\": \"worker\",\n            \"phone\": 3022183842,\n            \"nodes\": [],\n            \"_id\": \"5efa2be695906a21204d0a34\",\n            \"userName\": \"perugracia\",\n            \"name\": \"Peru\",\n            \"lastName\": \"Gracia\",\n            \"email\": \"peru@gmail.com\",\n            \"password\": \"$2a$10$HPSH5wnm/XBcD5XsMaNky.6MvXYAN3nSsQJcDO52gR.wlzY1Q8YQa\",\n            \"date\": \"2020-06-29T17:59:02.611Z\",\n            \"__v\": 1\n        },\n        {\n            \"routes\": [\n                \"5ed1c898871f265686cef98f\"\n            ],\n            \"role\": \"worker\",\n            \"phone\": 3032183843,\n            \"nodes\": [],\n            \"_id\": \"5efa2eff95906a21204d0a35\",\n            \"userName\": \"brazilsanchez\",\n            \"name\": \"Brazil\",\n            \"lastName\": \"Sanchez\",\n            \"email\": \"brazil@gmail.com\",\n            \"password\": \"$2a$10$0Zl87I1iK8YnXdC.Tl4UkONjje2JB4X7HYh7J5APgp9eAZ3oQqPMu\",\n            \"date\": \"2020-06-29T18:12:15.103Z\",\n            \"__v\": 1\n        },\n        {\n            \"routes\": [\n                \"5f023eb7421ac02e74582f57\"\n            ],\n            \"role\": \"worker\",\n            \"phone\": 3202131431,\n            \"nodes\": [],\n            \"_id\": \"5efa2f2695906a21204d0a36\",\n            \"userName\": \"franciasanchez\",\n            \"name\": \"Francia\",\n            \"lastName\": \"Sanchez\",\n            \"email\": \"francia@gmail.com\",\n            \"password\": \"$2a$10$DnX6XE0D85Ea87oFibsKMeKV0rCgs8eBBPeP5DZOZqpAgaPUgtXV.\",\n            \"date\": \"2020-06-29T18:12:54.432Z\",\n            \"__v\": 1\n        },\n        {\n            \"routes\": [\n                \"5ef90c1467a90018a406615a\"\n            ],\n            \"role\": \"worker\",\n            \"phone\": 3010218524,\n            \"nodes\": [],\n            \"_id\": \"5efa2f6095906a21204d0a37\",\n            \"userName\": \"alemaniaperez\",\n            \"name\": \"Alemania\",\n            \"lastName\": \"Perez\",\n            \"email\": \"alemania@gmail.com\",\n            \"password\": \"$2a$10$itzjHvJs9KgWcAz9H8eg6.BFsedOnr82hzLvp5N/TX4eZFM9qR0nu\",\n            \"date\": \"2020-06-29T18:13:52.154Z\",\n            \"__v\": 1\n        },\n        {\n            \"routes\": [],\n            \"role\": \"worker\",\n            \"phone\": 3013131313,\n            \"nodes\": [],\n            \"_id\": \"5efa2f8595906a21204d0a38\",\n            \"userName\": \"panamaperez\",\n            \"name\": \"Panama\",\n            \"lastName\": \"Perez\",\n            \"email\": \"panama@gmail.com\",\n            \"password\": \"$2a$10$9CHZ8Q5XnNdBLTyspKOjYOllu3uD6CDn9NZzfn9iVdB.EPKWSTcWi\",\n            \"date\": \"2020-06-29T18:14:29.563Z\",\n            \"__v\": 0\n        },\n        {\n            \"routes\": [\n                \"5ed1cce2959edf3098c65454\"\n            ],\n            \"role\": \"worker\",\n            \"phone\": 3021838434,\n            \"nodes\": [],\n            \"_id\": \"5efa2fa795906a21204d0a39\",\n            \"userName\": \"boliviasanchez\",\n            \"name\": \"Bolivia\",\n            \"lastName\": \"Sanchez\",\n            \"email\": \"bolivia@gmail.com\",\n            \"password\": \"$2a$10$PesyH.f04d8Ka1Nz/QrBkegkHzq7n7U/5XYFPrNVgtzA6mSgavVN6\",\n            \"date\": \"2020-06-29T18:15:03.750Z\",\n            \"__v\": 1\n        },\n        {\n            \"routes\": [\n                \"5ed1bda3871f265686cef989\"\n            ],\n            \"role\": \"worker\",\n            \"phone\": 3032184832,\n            \"nodes\": [],\n            \"_id\": \"5efa2fc795906a21204d0a3a\",\n            \"userName\": \"colombiapastran\",\n            \"name\": \"Colombia\",\n            \"lastName\": \"Pastran\",\n            \"email\": \"colombia@gmail.com\",\n            \"password\": \"$2a$10$9JZ9AtC0AxRedC6zwmvjn.hc8yE0uoxv2eTGKCmoxxMGi4x67A5.C\",\n            \"date\": \"2020-06-29T18:15:35.379Z\",\n            \"__v\": 1\n        },\n        {\n            \"routes\": [\n                \"5ed1d7204ecaef3728fe1131\"\n            ],\n            \"role\": \"worker\",\n            \"phone\": 3021838431,\n            \"nodes\": [],\n            \"_id\": \"5efa2ff295906a21204d0a3b\",\n            \"userName\": \"chileperez\",\n            \"name\": \"Chile\",\n            \"lastName\": \"Perez\",\n            \"email\": \"chile@gmail.com\",\n            \"password\": \"$2a$10$NJ2u5YKn/nNfQCbZzRb0F.2yWpu2lrdS57CWcAFAKnvRVnua0l2A2\",\n            \"date\": \"2020-06-29T18:16:18.309Z\",\n            \"__v\": 1\n        },\n        {\n            \"routes\": [],\n            \"role\": \"worker\",\n            \"phone\": 3033333333,\n            \"nodes\": [],\n            \"_id\": \"5efa301695906a21204d0a3c\",\n            \"userName\": \"uruguayperez\",\n            \"name\": \"Uruguay\",\n            \"lastName\": \"Perez\",\n            \"email\": \"uruguay@gmail.com\",\n            \"password\": \"$2a$10$74uGg3fSms/CemvQqDZ.ReXAlFiBDcshQcCm6AUiIg6I9yhjsrY0O\",\n            \"date\": \"2020-06-29T18:16:54.715Z\",\n            \"__v\": 0\n        },\n        {\n            \"routes\": [],\n            \"role\": \"worker\",\n            \"phone\": 3012121311,\n            \"nodes\": [],\n            \"_id\": \"5efa304195906a21204d0a3d\",\n            \"userName\": \"costarica\",\n            \"name\": \"Costa\",\n            \"lastName\": \"Rica\",\n            \"email\": \"costa@gmail.com\",\n            \"password\": \"$2a$10$EnXaWd.hbG2/l.qm0FxFi.3e6lXGlPz3rOlw5KiNUIxpP62o9FFve\",\n            \"date\": \"2020-06-29T18:17:37.933Z\",\n            \"__v\": 0\n        },\n        {\n            \"routes\": [],\n            \"role\": \"worker\",\n            \"phone\": 3021213131,\n            \"nodes\": [],\n            \"_id\": \"5efa306695906a21204d0a3e\",\n            \"userName\": \"españa\",\n            \"name\": \"España\",\n            \"lastName\": \"Perez\",\n            \"email\": \"espa@gmail.com\",\n            \"password\": \"$2a$10$Pe5aGAeaHQFKyx93rW7mVOAbQ.0i6fCvkSNAnyuKrVq7FalHaswMm\",\n            \"date\": \"2020-06-29T18:18:14.311Z\",\n            \"__v\": 0\n        },\n        {\n            \"routes\": [],\n            \"role\": \"worker\",\n            \"phone\": 3131121144,\n            \"nodes\": [],\n            \"_id\": \"5efa308295906a21204d0a3f\",\n            \"userName\": \"italiaperez\",\n            \"name\": \"Italia\",\n            \"lastName\": \"Perez\",\n            \"email\": \"italia@gmail.com\",\n            \"password\": \"$2a$10$udZsw5Hzl3oQ2.11HAJbl.GR1ZT1tZXUDaPibRpibdoamV/JZC8/i\",\n            \"date\": \"2020-06-29T18:18:42.137Z\",\n            \"__v\": 0\n        },\n        {\n            \"routes\": [\n                \"5ed196126965064b88744096\"\n            ],\n            \"role\": \"worker\",\n            \"phone\": 3131314994,\n            \"nodes\": [],\n            \"_id\": \"5efa30a195906a21204d0a40\",\n            \"userName\": \"chinaperez\",\n            \"name\": \"China\",\n            \"lastName\": \"Perez\",\n            \"email\": \"china@gmail.com\",\n            \"password\": \"$2a$10$EJFhWKQZip1iZy0AG9ZoYul0Cb2t941sWCGz6bcyXFUbLcTtTHSVq\",\n            \"date\": \"2020-06-29T18:19:13.381Z\",\n            \"__v\": 1\n        },\n        {\n            \"routes\": [\n                \"5ecb568c72d5f513488f83bb\"\n            ],\n            \"role\": \"worker\",\n            \"phone\": 3031314155,\n            \"nodes\": [],\n            \"_id\": \"5efa30c195906a21204d0a41\",\n            \"userName\": \"cubaperez\",\n            \"name\": \"Cuba\",\n            \"lastName\": \"Perez\",\n            \"email\": \"cuba@gmail.com\",\n            \"password\": \"$2a$10$qPRPpAgddzBlMH4nxY2EUe.U1iOr2saQz1AueNxWXz37BWskCOo2S\",\n            \"date\": \"2020-06-29T18:19:45.156Z\",\n            \"__v\": 1\n        },\n        {\n            \"routes\": [\n                \"5ecb5215d30f76148c82d992\"\n            ],\n            \"role\": \"worker\",\n            \"phone\": 3130193101,\n            \"nodes\": [],\n            \"_id\": \"5efa30da95906a21204d0a42\",\n            \"userName\": \"australiaperez\",\n            \"name\": \"Australia\",\n            \"lastName\": \"Perez\",\n            \"email\": \"autralia@gmail.com\",\n            \"password\": \"$2a$10$g4dWPk7wJ3J7/S3ZgDF4gu160SjalAe4a83rHBNIjjQ1Y7YWhba9.\",\n            \"date\": \"2020-06-29T18:20:10.532Z\",\n            \"__v\": 1\n        },\n        {\n            \"routes\": [\n                \"5ecb48b2d30f76148c82d991\"\n            ],\n            \"role\": \"worker\",\n            \"phone\": 3141415951,\n            \"nodes\": [],\n            \"_id\": \"5efa30f795906a21204d0a43\",\n            \"userName\": \"indiaperez\",\n            \"name\": \"India\",\n            \"lastName\": \"Perez\",\n            \"email\": \"india@gmail.com\",\n            \"password\": \"$2a$10$paxnyvOHy7afEcOVaakRDuoSsK8zexFNlnCny2lymJi5yl81YVtWy\",\n            \"date\": \"2020-06-29T18:20:39.015Z\",\n            \"__v\": 1\n        },\n        {\n            \"routes\": [\n                \"5ecb4458d30f76148c82d990\"\n            ],\n            \"role\": \"worker\",\n            \"phone\": 3131311555,\n            \"nodes\": [],\n            \"_id\": \"5efa311895906a21204d0a44\",\n            \"userName\": \"austrialperez\",\n            \"name\": \"Austrial\",\n            \"lastName\": \"Perez\",\n            \"email\": \"austria@gmail.com\",\n            \"password\": \"$2a$10$yNPjlPGpLu1PN9DZ23FNKOdc0ay.CHJV8.S6JgtS1FtWBONbum62q\",\n            \"date\": \"2020-06-29T18:21:12.988Z\",\n            \"__v\": 1\n        },\n        {\n            \"routes\": [\n                \"5ecb3e2bd30f76148c82d98f\"\n            ],\n            \"role\": \"worker\",\n            \"phone\": 3131314667,\n            \"nodes\": [],\n            \"_id\": \"5efa313e95906a21204d0a45\",\n            \"userName\": \"republicadominicana\",\n            \"name\": \"Republica\",\n            \"lastName\": \"Dominicana\",\n            \"email\": \"republica@gmail.com\",\n            \"password\": \"$2a$10$AFbZqad8wIc0i5zBQUCm/OPCMI6WF3W6.9Ee/DCLIIp6kfmFC89r6\",\n            \"date\": \"2020-06-29T18:21:50.784Z\",\n            \"__v\": 1\n        },\n        {\n            \"routes\": [\n                \"5ecb393ec225661fd87b4f4d\"\n            ],\n            \"role\": \"worker\",\n            \"phone\": 3131456674,\n            \"nodes\": [],\n            \"_id\": \"5efa315d95906a21204d0a46\",\n            \"userName\": \"suizaperez\",\n            \"name\": \"Suiza\",\n            \"lastName\": \"Perez\",\n            \"email\": \"suiza@gmail.com\",\n            \"password\": \"$2a$10$ESO86kHz00qYpbjre0w7Nu6LKpvall6ga4k7EWXG16BxKwpQ.l7zi\",\n            \"date\": \"2020-06-29T18:22:21.879Z\",\n            \"__v\": 1\n        },\n        {\n            \"routes\": [\n                \"5ecb393ec225661fd87b4f4d\"\n            ],\n            \"role\": \"worker\",\n            \"phone\": 3111111112,\n            \"nodes\": [],\n            \"_id\": \"5efa317b95906a21204d0a47\",\n            \"userName\": \"sueciaperez\",\n            \"name\": \"Suecia\",\n            \"lastName\": \"Perez\",\n            \"email\": \"suecia@gmail.com\",\n            \"password\": \"$2a$10$LUDEqJy5KSUWm27aTNumhOCmEs92fCyUbX2LZ5kJhWynJ4B2qrhDS\",\n            \"date\": \"2020-06-29T18:22:51.932Z\",\n            \"__v\": 1\n        },\n        {\n            \"routes\": [\n                \"5ecb35ef3b6aa825e8429acf\"\n            ],\n            \"role\": \"worker\",\n            \"phone\": 3031213455,\n            \"nodes\": [],\n            \"_id\": \"5efa31a495906a21204d0a48\",\n            \"userName\": \"poloniaperez\",\n            \"name\": \"Polonia\",\n            \"lastName\": \"Perez\",\n            \"email\": \"polonia@gmail.com\",\n            \"password\": \"$2a$10$7QTVtskGcHmoFDzGyiQaYe1SqwcBG0tO5WcYAXB2EABciO5z6A9OC\",\n            \"date\": \"2020-06-29T18:23:32.928Z\",\n            \"__v\": 1\n        }\n    ]\n}"
+						},
+						{
+							"name": "Obtener Usuarios",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/user/?role=worker",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"user",
+										""
+									],
+									"query": [
+										{
+											"key": "role",
+											"value": "worker"
+										}
+									]
+								}
+							},
+							"_postman_previewlanguage": "Text",
+							"header": [],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				},
+				{
+					"name": "Buscar Usuarios API",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{access_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "{{url}}/users/search/?keyword=diana",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"users",
+								"search",
+								""
+							],
+							"query": [
+								{
+									"key": "keyword",
+									"value": "diana",
+									"description": "Palabra Clave Puede ser nombre de usuario, primer nombre o ultimo nombre"
+								}
+							]
+						},
+						"description": "Envia un Query Multiple"
+					},
+					"response": [
+						{
+							"name": "Obtener Usuarios",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/user/?role=worker",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"user",
+										""
+									],
+									"query": [
+										{
+											"key": "role",
+											"value": "worker"
+										}
+									]
+								}
+							},
+							"_postman_previewlanguage": "Text",
+							"header": [],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "Obtener Usuarios Trabajadores",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/user/?role=worker",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"user",
+										""
+									],
+									"query": [
+										{
+											"key": "role",
+											"value": "worker",
+											"description": "El rol de usuario puede ser \"admin\", \"worker\", \"client\",\"none\" "
+										},
+										{
+											"key": "_id",
+											"value": "5ef912463baa6b2e8c9a4f49",
+											"description": "Id de usuario",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "7060"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1b94-YAGhJaJKDBFoanxm9whEOURM3vI\""
+								},
+								{
+									"key": "Set-Cookie",
+									"value": "connect.sid=s%3A_y9M2TMunH4g8Fu_xaxIgtK_oCBzqTxT.UPUWBfHMDCb3JOqVqbBpCzCNLOoGizYifS3K4D%2BdUrs; Path=/; HttpOnly"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 15 Jul 2020 03:26:53 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"error\": \"\",\n    \"message\": [\n        {\n            \"routes\": [\n                \"5ed1c38d871f265686cef98b\"\n            ],\n            \"role\": \"worker\",\n            \"phone\": 3022183841,\n            \"nodes\": [],\n            \"_id\": \"5ef912463baa6b2e8c9a4f49\",\n            \"userName\": \"argentinamartinez\",\n            \"name\": \"Argentina\",\n            \"lastName\": \"Martinez\",\n            \"email\": \"argentina@gmail.com\",\n            \"password\": \"$2a$10$.YEQyBOsZiqa2llfGcxUXe3xixRn3XeMdHICzKFk/ZpOxH6ojjbHK\",\n            \"date\": \"2020-06-28T21:57:26.556Z\",\n            \"__v\": 1\n        },\n        {\n            \"routes\": [\n                \"5ed1991f6965064b88744097\",\n                \"5ed1bd89871f265686cef988\"\n            ],\n            \"role\": \"worker\",\n            \"phone\": 3022183842,\n            \"nodes\": [],\n            \"_id\": \"5efa2be695906a21204d0a34\",\n            \"userName\": \"perugracia\",\n            \"name\": \"Peru\",\n            \"lastName\": \"Gracia\",\n            \"email\": \"peru@gmail.com\",\n            \"password\": \"$2a$10$HPSH5wnm/XBcD5XsMaNky.6MvXYAN3nSsQJcDO52gR.wlzY1Q8YQa\",\n            \"date\": \"2020-06-29T17:59:02.611Z\",\n            \"__v\": 1\n        },\n        {\n            \"routes\": [\n                \"5ed1c898871f265686cef98f\"\n            ],\n            \"role\": \"worker\",\n            \"phone\": 3032183843,\n            \"nodes\": [],\n            \"_id\": \"5efa2eff95906a21204d0a35\",\n            \"userName\": \"brazilsanchez\",\n            \"name\": \"Brazil\",\n            \"lastName\": \"Sanchez\",\n            \"email\": \"brazil@gmail.com\",\n            \"password\": \"$2a$10$0Zl87I1iK8YnXdC.Tl4UkONjje2JB4X7HYh7J5APgp9eAZ3oQqPMu\",\n            \"date\": \"2020-06-29T18:12:15.103Z\",\n            \"__v\": 1\n        },\n        {\n            \"routes\": [\n                \"5f023eb7421ac02e74582f57\"\n            ],\n            \"role\": \"worker\",\n            \"phone\": 3202131431,\n            \"nodes\": [],\n            \"_id\": \"5efa2f2695906a21204d0a36\",\n            \"userName\": \"franciasanchez\",\n            \"name\": \"Francia\",\n            \"lastName\": \"Sanchez\",\n            \"email\": \"francia@gmail.com\",\n            \"password\": \"$2a$10$DnX6XE0D85Ea87oFibsKMeKV0rCgs8eBBPeP5DZOZqpAgaPUgtXV.\",\n            \"date\": \"2020-06-29T18:12:54.432Z\",\n            \"__v\": 1\n        },\n        {\n            \"routes\": [\n                \"5ef90c1467a90018a406615a\"\n            ],\n            \"role\": \"worker\",\n            \"phone\": 3010218524,\n            \"nodes\": [],\n            \"_id\": \"5efa2f6095906a21204d0a37\",\n            \"userName\": \"alemaniaperez\",\n            \"name\": \"Alemania\",\n            \"lastName\": \"Perez\",\n            \"email\": \"alemania@gmail.com\",\n            \"password\": \"$2a$10$itzjHvJs9KgWcAz9H8eg6.BFsedOnr82hzLvp5N/TX4eZFM9qR0nu\",\n            \"date\": \"2020-06-29T18:13:52.154Z\",\n            \"__v\": 1\n        },\n        {\n            \"routes\": [],\n            \"role\": \"worker\",\n            \"phone\": 3013131313,\n            \"nodes\": [],\n            \"_id\": \"5efa2f8595906a21204d0a38\",\n            \"userName\": \"panamaperez\",\n            \"name\": \"Panama\",\n            \"lastName\": \"Perez\",\n            \"email\": \"panama@gmail.com\",\n            \"password\": \"$2a$10$9CHZ8Q5XnNdBLTyspKOjYOllu3uD6CDn9NZzfn9iVdB.EPKWSTcWi\",\n            \"date\": \"2020-06-29T18:14:29.563Z\",\n            \"__v\": 0\n        },\n        {\n            \"routes\": [\n                \"5ed1cce2959edf3098c65454\"\n            ],\n            \"role\": \"worker\",\n            \"phone\": 3021838434,\n            \"nodes\": [],\n            \"_id\": \"5efa2fa795906a21204d0a39\",\n            \"userName\": \"boliviasanchez\",\n            \"name\": \"Bolivia\",\n            \"lastName\": \"Sanchez\",\n            \"email\": \"bolivia@gmail.com\",\n            \"password\": \"$2a$10$PesyH.f04d8Ka1Nz/QrBkegkHzq7n7U/5XYFPrNVgtzA6mSgavVN6\",\n            \"date\": \"2020-06-29T18:15:03.750Z\",\n            \"__v\": 1\n        },\n        {\n            \"routes\": [\n                \"5ed1bda3871f265686cef989\"\n            ],\n            \"role\": \"worker\",\n            \"phone\": 3032184832,\n            \"nodes\": [],\n            \"_id\": \"5efa2fc795906a21204d0a3a\",\n            \"userName\": \"colombiapastran\",\n            \"name\": \"Colombia\",\n            \"lastName\": \"Pastran\",\n            \"email\": \"colombia@gmail.com\",\n            \"password\": \"$2a$10$9JZ9AtC0AxRedC6zwmvjn.hc8yE0uoxv2eTGKCmoxxMGi4x67A5.C\",\n            \"date\": \"2020-06-29T18:15:35.379Z\",\n            \"__v\": 1\n        },\n        {\n            \"routes\": [\n                \"5ed1d7204ecaef3728fe1131\"\n            ],\n            \"role\": \"worker\",\n            \"phone\": 3021838431,\n            \"nodes\": [],\n            \"_id\": \"5efa2ff295906a21204d0a3b\",\n            \"userName\": \"chileperez\",\n            \"name\": \"Chile\",\n            \"lastName\": \"Perez\",\n            \"email\": \"chile@gmail.com\",\n            \"password\": \"$2a$10$NJ2u5YKn/nNfQCbZzRb0F.2yWpu2lrdS57CWcAFAKnvRVnua0l2A2\",\n            \"date\": \"2020-06-29T18:16:18.309Z\",\n            \"__v\": 1\n        },\n        {\n            \"routes\": [],\n            \"role\": \"worker\",\n            \"phone\": 3033333333,\n            \"nodes\": [],\n            \"_id\": \"5efa301695906a21204d0a3c\",\n            \"userName\": \"uruguayperez\",\n            \"name\": \"Uruguay\",\n            \"lastName\": \"Perez\",\n            \"email\": \"uruguay@gmail.com\",\n            \"password\": \"$2a$10$74uGg3fSms/CemvQqDZ.ReXAlFiBDcshQcCm6AUiIg6I9yhjsrY0O\",\n            \"date\": \"2020-06-29T18:16:54.715Z\",\n            \"__v\": 0\n        },\n        {\n            \"routes\": [],\n            \"role\": \"worker\",\n            \"phone\": 3012121311,\n            \"nodes\": [],\n            \"_id\": \"5efa304195906a21204d0a3d\",\n            \"userName\": \"costarica\",\n            \"name\": \"Costa\",\n            \"lastName\": \"Rica\",\n            \"email\": \"costa@gmail.com\",\n            \"password\": \"$2a$10$EnXaWd.hbG2/l.qm0FxFi.3e6lXGlPz3rOlw5KiNUIxpP62o9FFve\",\n            \"date\": \"2020-06-29T18:17:37.933Z\",\n            \"__v\": 0\n        },\n        {\n            \"routes\": [],\n            \"role\": \"worker\",\n            \"phone\": 3021213131,\n            \"nodes\": [],\n            \"_id\": \"5efa306695906a21204d0a3e\",\n            \"userName\": \"españa\",\n            \"name\": \"España\",\n            \"lastName\": \"Perez\",\n            \"email\": \"espa@gmail.com\",\n            \"password\": \"$2a$10$Pe5aGAeaHQFKyx93rW7mVOAbQ.0i6fCvkSNAnyuKrVq7FalHaswMm\",\n            \"date\": \"2020-06-29T18:18:14.311Z\",\n            \"__v\": 0\n        },\n        {\n            \"routes\": [],\n            \"role\": \"worker\",\n            \"phone\": 3131121144,\n            \"nodes\": [],\n            \"_id\": \"5efa308295906a21204d0a3f\",\n            \"userName\": \"italiaperez\",\n            \"name\": \"Italia\",\n            \"lastName\": \"Perez\",\n            \"email\": \"italia@gmail.com\",\n            \"password\": \"$2a$10$udZsw5Hzl3oQ2.11HAJbl.GR1ZT1tZXUDaPibRpibdoamV/JZC8/i\",\n            \"date\": \"2020-06-29T18:18:42.137Z\",\n            \"__v\": 0\n        },\n        {\n            \"routes\": [\n                \"5ed196126965064b88744096\"\n            ],\n            \"role\": \"worker\",\n            \"phone\": 3131314994,\n            \"nodes\": [],\n            \"_id\": \"5efa30a195906a21204d0a40\",\n            \"userName\": \"chinaperez\",\n            \"name\": \"China\",\n            \"lastName\": \"Perez\",\n            \"email\": \"china@gmail.com\",\n            \"password\": \"$2a$10$EJFhWKQZip1iZy0AG9ZoYul0Cb2t941sWCGz6bcyXFUbLcTtTHSVq\",\n            \"date\": \"2020-06-29T18:19:13.381Z\",\n            \"__v\": 1\n        },\n        {\n            \"routes\": [\n                \"5ecb568c72d5f513488f83bb\"\n            ],\n            \"role\": \"worker\",\n            \"phone\": 3031314155,\n            \"nodes\": [],\n            \"_id\": \"5efa30c195906a21204d0a41\",\n            \"userName\": \"cubaperez\",\n            \"name\": \"Cuba\",\n            \"lastName\": \"Perez\",\n            \"email\": \"cuba@gmail.com\",\n            \"password\": \"$2a$10$qPRPpAgddzBlMH4nxY2EUe.U1iOr2saQz1AueNxWXz37BWskCOo2S\",\n            \"date\": \"2020-06-29T18:19:45.156Z\",\n            \"__v\": 1\n        },\n        {\n            \"routes\": [\n                \"5ecb5215d30f76148c82d992\"\n            ],\n            \"role\": \"worker\",\n            \"phone\": 3130193101,\n            \"nodes\": [],\n            \"_id\": \"5efa30da95906a21204d0a42\",\n            \"userName\": \"australiaperez\",\n            \"name\": \"Australia\",\n            \"lastName\": \"Perez\",\n            \"email\": \"autralia@gmail.com\",\n            \"password\": \"$2a$10$g4dWPk7wJ3J7/S3ZgDF4gu160SjalAe4a83rHBNIjjQ1Y7YWhba9.\",\n            \"date\": \"2020-06-29T18:20:10.532Z\",\n            \"__v\": 1\n        },\n        {\n            \"routes\": [\n                \"5ecb48b2d30f76148c82d991\"\n            ],\n            \"role\": \"worker\",\n            \"phone\": 3141415951,\n            \"nodes\": [],\n            \"_id\": \"5efa30f795906a21204d0a43\",\n            \"userName\": \"indiaperez\",\n            \"name\": \"India\",\n            \"lastName\": \"Perez\",\n            \"email\": \"india@gmail.com\",\n            \"password\": \"$2a$10$paxnyvOHy7afEcOVaakRDuoSsK8zexFNlnCny2lymJi5yl81YVtWy\",\n            \"date\": \"2020-06-29T18:20:39.015Z\",\n            \"__v\": 1\n        },\n        {\n            \"routes\": [\n                \"5ecb4458d30f76148c82d990\"\n            ],\n            \"role\": \"worker\",\n            \"phone\": 3131311555,\n            \"nodes\": [],\n            \"_id\": \"5efa311895906a21204d0a44\",\n            \"userName\": \"austrialperez\",\n            \"name\": \"Austrial\",\n            \"lastName\": \"Perez\",\n            \"email\": \"austria@gmail.com\",\n            \"password\": \"$2a$10$yNPjlPGpLu1PN9DZ23FNKOdc0ay.CHJV8.S6JgtS1FtWBONbum62q\",\n            \"date\": \"2020-06-29T18:21:12.988Z\",\n            \"__v\": 1\n        },\n        {\n            \"routes\": [\n                \"5ecb3e2bd30f76148c82d98f\"\n            ],\n            \"role\": \"worker\",\n            \"phone\": 3131314667,\n            \"nodes\": [],\n            \"_id\": \"5efa313e95906a21204d0a45\",\n            \"userName\": \"republicadominicana\",\n            \"name\": \"Republica\",\n            \"lastName\": \"Dominicana\",\n            \"email\": \"republica@gmail.com\",\n            \"password\": \"$2a$10$AFbZqad8wIc0i5zBQUCm/OPCMI6WF3W6.9Ee/DCLIIp6kfmFC89r6\",\n            \"date\": \"2020-06-29T18:21:50.784Z\",\n            \"__v\": 1\n        },\n        {\n            \"routes\": [\n                \"5ecb393ec225661fd87b4f4d\"\n            ],\n            \"role\": \"worker\",\n            \"phone\": 3131456674,\n            \"nodes\": [],\n            \"_id\": \"5efa315d95906a21204d0a46\",\n            \"userName\": \"suizaperez\",\n            \"name\": \"Suiza\",\n            \"lastName\": \"Perez\",\n            \"email\": \"suiza@gmail.com\",\n            \"password\": \"$2a$10$ESO86kHz00qYpbjre0w7Nu6LKpvall6ga4k7EWXG16BxKwpQ.l7zi\",\n            \"date\": \"2020-06-29T18:22:21.879Z\",\n            \"__v\": 1\n        },\n        {\n            \"routes\": [\n                \"5ecb393ec225661fd87b4f4d\"\n            ],\n            \"role\": \"worker\",\n            \"phone\": 3111111112,\n            \"nodes\": [],\n            \"_id\": \"5efa317b95906a21204d0a47\",\n            \"userName\": \"sueciaperez\",\n            \"name\": \"Suecia\",\n            \"lastName\": \"Perez\",\n            \"email\": \"suecia@gmail.com\",\n            \"password\": \"$2a$10$LUDEqJy5KSUWm27aTNumhOCmEs92fCyUbX2LZ5kJhWynJ4B2qrhDS\",\n            \"date\": \"2020-06-29T18:22:51.932Z\",\n            \"__v\": 1\n        },\n        {\n            \"routes\": [\n                \"5ecb35ef3b6aa825e8429acf\"\n            ],\n            \"role\": \"worker\",\n            \"phone\": 3031213455,\n            \"nodes\": [],\n            \"_id\": \"5efa31a495906a21204d0a48\",\n            \"userName\": \"poloniaperez\",\n            \"name\": \"Polonia\",\n            \"lastName\": \"Perez\",\n            \"email\": \"polonia@gmail.com\",\n            \"password\": \"$2a$10$7QTVtskGcHmoFDzGyiQaYe1SqwcBG0tO5WcYAXB2EABciO5z6A9OC\",\n            \"date\": \"2020-06-29T18:23:32.928Z\",\n            \"__v\": 1\n        }\n    ]\n}"
+						}
+					]
+				}
+			],
+			"description": "Esta carpeta tiene los end point de todo lo relacionado a los usuarios"
+		},
+		{
+			"name": "Companies",
+			"item": [
+				{
+					"name": "Listar Compañias",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{access_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/companies/",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"companies",
+								""
+							],
+							"query": [
+								{
+									"key": "role",
+									"value": "admin",
+									"description": "El rol de usuario puede ser \"admin\", \"worker\", \"client\",\"none\" ",
+									"disabled": true
+								},
+								{
+									"key": "_id",
+									"value": "5eca01492e57643c9c358e76",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obtener una Compañia",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{access_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/companies/:id",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"companies",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "5fd829b2b2353c0e83b208c7",
+									"type": "string"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar Una Compañia",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{access_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "_id",
+									"value": "5f2b151cc6000c560442e471",
+									"description": "ID de usuario",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/companies/delete",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"companies",
+								"delete"
+							]
+						},
+						"description": "Envia un Query Multiple"
+					},
+					"response": []
+				},
+				{
+					"name": "Crear Compañia",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{access_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "rappi",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "empresa que paga mal",
+									"type": "text"
+								},
+								{
+									"key": "nit",
+									"value": "121313",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/companies/",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"companies",
+								""
+							]
+						},
+						"description": "Envia un Query Multiple"
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar Compañia API",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{access_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "nit",
+									"value": "asdasa",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "3003218312",
+									"type": "text"
+								},
+								{
+									"key": "_id",
+									"value": "5fd833c3d1fb76301097edd9",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/companies/update",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"companies",
+								"update"
+							]
+						},
+						"description": "Envia un Query Multiple"
+					},
+					"response": []
+				}
+			],
+			"description": "Esta carpeta tiene los end point de todo lo relacionado a los usuarios",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "SignInAPI",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var jsonData = JSON.parse(responseBody);\r",
+									"postman.setEnvironmentVariable(\"access_token\", jsonData.token);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "1234",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "ndpastranzamora@gmail.com",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "{{url}}/auth/api/sign-in",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"auth",
+								"api",
+								"sign-in"
+							]
+						},
+						"description": "Envia un Query Multiple"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
